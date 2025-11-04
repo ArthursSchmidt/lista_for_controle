@@ -12,14 +12,36 @@
     //ENTRADA
     let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
     
-    let ordem = [];
-
+    let minusculas = [];
+    let contagem = {};
+    let repetidas = [];
+    let unicas = [];
+    
 
     //PROCESSAMENTO
-    for (let letra = 0 + 1) {
-        
+    for (let items of listaDeLetras){
+        minusculas.push(items.toLowerCase());
     }
-    
+    for (let items of minusculas) {
+        if (contagem[items]) {
+            contagem[items]++;
+        }
+        else {
+            contagem[items] = 1;
+        }
+    }
+    for (let items in contagem){
+        if (contagem[items] > 1) {
+            repetidas.push(items);
+        }
+        else {
+            unicas.push(items);
+        }
+    }
     //SAÍDA
+    repetidas.sort();
+    unicas.sort();
+
+    alert(`${listaDeLetras} \n${unicas.join(", ")} \n${repetidas.join(", ")}`);
 
 </script>
