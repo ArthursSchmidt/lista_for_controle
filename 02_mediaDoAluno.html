@@ -10,8 +10,15 @@
     let quantidadeNotas = prompt(`quantas notas o aluno obteve?`);
 
     //PROCESSAMENTO
-    
+    let mediaNotas = 0;
+
+    for (let I = 1; I <= quantidadeNotas; I++) {
+        mediaNotas = mediaNotas + Number(prompt(`Insira a ${I}° nota do aluno`));
+    }
+    mediaNotas = mediaNotas / quantidadeNotas;
+
 
     //SAÍDA
+    alert(`à média das notas do aluno é ${mediaNotas.toFixed(1)}`);
 
 </script>
