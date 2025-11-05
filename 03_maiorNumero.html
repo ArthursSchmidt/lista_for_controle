@@ -7,15 +7,23 @@
     */
 
     //ENTRADA
-    let numero1 = Number(prompt(`informe o primeiro número`));
-    let numero2 = Number(prompt(`informe o segundo número`));
-    let numero3 = Number(prompt(`informe o terceiro número`));
-    let numero4 = Number(prompt(`informe o quarto número`));
-    let numero5 = Number(prompt(`informe o quinto número`));
-    
+    let numeros = [];
+
+    for (let I = 1; I <= 5; I++){
+        numeros.push(Number(prompt(`Insira um numero`)));
+    }
+
+    let numMaiores = 0;
+
     //PROCESSAMENTO
-    for ()
+    for (let items of numeros) {
+        if (items > numMaiores) {
+            numMaiores = items;
+        }
+
+    }
     
     //SAÍDA
+    alert(`${numMaiores}`)
 
 </script>
