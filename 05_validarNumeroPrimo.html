@@ -8,13 +8,22 @@
     //ENTRADA
     let numero = Number(prompt(`insira um numero`));
 
-    if (numero % 1 == 1 && numero % numero == 1) {
-        alert(``)
+    let primo = true;
+    //PROCESSAMENTO
+for (let i = 2; i <= (numero - 1); i++) {
+        if (Number.isInteger(numero/i)){
+            primo = false;
+        }
     }
 
-    //PROCESSAMENTO
-
-
     //SAÍDA
-
+    if (primo == true && numero !== 1){
+        alert(`O numero ${numero} é primo`)
+    }
+    else if (primo != true) {
+        alert(`o numero ${numero} não é primo`)
+    }
+    else {
+        alert(`o numero não é primo`)
+    }
 </script>
