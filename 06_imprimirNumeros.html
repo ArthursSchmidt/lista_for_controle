@@ -6,11 +6,27 @@
     */
 
     //ENTRADA
+    let numero1 = Number(prompt(`escreva o numero inicial`));
+    let numero2 = Number(prompt(`insira o numero final`));
 
-    
+    let impares = [];
+    let pares = [];
+
     //PROCESSAMENTO
+    if (numero1 < numero2) {
+        for (let i = numero1; i <= numero2; i++) {
+            if (i % 2 == 0) {
+                pares.push(i);
+            }
+            else {
+                impares.push(i);
+            }
+        }
+        alert(`os numeros pares são ${pares}, e  os números impares são ${impares}`)
+    }
+    else {
+        alert(`O número inicial é maior do que o número final!`);
+    }
 
-    
     //SAÍDA
-
 </script>
